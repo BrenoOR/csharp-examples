@@ -4,6 +4,36 @@ namespace Instrucoes
 {
     class Program
     {
+
+        static void Main(string[] args)
+        {
+            string[] arguments = {"arg1","arg2","arg3","arg4","arg5"};
+            // Console.WriteLine("Declaracoes");
+            // Declaracoes();
+            // Console.WriteLine("\n InstrucaoIf");
+            // InstrucaoIf(arguments);
+            // Console.WriteLine("\n InstrucaoSwitch");
+            // InstrucaoSwitch(arguments);
+            // Console.WriteLine("\n InstrucaoWhile");
+            // InstrucaoWhile(arguments);
+            // Console.WriteLine("\n InstrucaoDo");
+            // InstrucaoDo(arguments);
+            // Console.WriteLine("\n InstrucaoFor");
+            // InstrucaoFor(arguments);
+            // Console.WriteLine("\n InstrucaoForeach");
+            // InstrucaoForeach(arguments);
+            // Console.WriteLine("\n InstrucaoBreak");
+            // InstrucaoBreak(arguments);
+            // Console.WriteLine("\n InstrucaoContinue");
+            // InstrucaoContinue(arguments);
+            // Console.WriteLine("\n InstrucaoReturn");
+            // InstrucaoReturn(arguments);
+            // Console.WriteLine("\n InstrucoesTryCatchFinallyThrow");
+            // InstrucoesTryCatchFinallyThrow(arguments);
+            Console.WriteLine("\n InstrucaoUsing");
+            InstrucaoUsing(arguments);
+        }
+
         static void Declaracoes()
         {
             int a;
@@ -162,9 +192,10 @@ namespace Instrucoes
         {
             using (System.IO.TextWriter w = System.IO.File.CreateText("teste.txt"))
             {
-                w.WriteLine("Line 1");
-                w.WriteLine("Line 2");
-                w.WriteLine("Line 3");
+                foreach(string s in args)
+                {
+                    w.WriteLine(s);
+                }
             }
         }
     }
